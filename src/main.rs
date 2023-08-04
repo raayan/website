@@ -63,8 +63,8 @@ fn main() -> Result<(), JsValue> {
             .map_err(|s| s.to_string())?;
 
         chart.with_projection(|mut pb| {
-            pb.pitch = f64::PI() * (90. / 360.);
-            pb.yaw = f64::PI() * (90. / 360.);
+            pb.pitch = f64::PI() * (50. / 360.);
+            pb.yaw = f64::PI() * (120. / 360.);
             pb.scale = 0.8;
             pb.into_matrix()
         });
@@ -153,7 +153,7 @@ fn main() -> Result<(), JsValue> {
             .configure_series_labels()
             .label_font(("monospace", 15).into_font().color(&WHITE))
             .border_style(WHITE)
-            .position(SeriesLabelPosition::LowerMiddle)
+            .position(SeriesLabelPosition::UpperLeft)
             .draw()
             .unwrap();
 
