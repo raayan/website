@@ -3,80 +3,84 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Raayan Pillai">
-    <meta property="og:description" content=""/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="http://raayanpillai.com/"/>
-    <meta property="og:url" content="http://raayan.net/"/>
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://raayanpillai.com/" />
+    <meta property="og:url" content="http://raayan.net/" />
 
     <title>raayan</title>
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/favicon.png" type="image/x-icon">
+    <base data-trunk-public-url />
 </head>
 
 <body dir=>
+    <link data-trunk rel="rust" href="Cargo.toml" data-wasm-opt="z" data-bin="web_test" />
+
     <main>
-      
-
-    <div>
-
-    <header>
-
-        <p>Hello, this is <strong style="color:DeepPink">Raayan's</strong> website. Thanks for stopping by.</p>
-
-    </header>
-      
-      
-    <article style="border: 4px dashed Orange; margin: 0px; padding: 10px">
-        <p>Some things I like:</p>
-
-        <ul>
-            <li>reading</li>
-            <li>running</li>
-            <li>computers</li>
-            <li>existential dread</li>
-            <li>art</li>
-            <li>guitars</li>
-            <li>food</li>
-            <li>wine</li>
-            <li>movies</li>
-        </ul>
-
-        <p>Good links for guests:</p>
-
-        <ul>
-            <li><a href="https://github.com/raayan">github</a></li>
-            <li><a href="/resume.pdf">resume</a></li>
-            <li><a href="https://www.linkedin.com/in/raayan">LinkedIn</a> (yikes)</li>
-            <li><a href="mailto:raayan@raayanpillai.com">please no emails</a></li>
-        </ul>
 
 
-        <article style="border: 4px dashed DeepPink; padding: 10px; margin: 10px">
-            <p>Check out this sweet GIF... made with Rust, math and some bitmaps</p>
+        <div>
 
-            <img src="/mixture_2d.gif" alt="2D MV Mixture"> 
-        </article>
+            <header>
 
-        <p>Good-bye!</p>
-    </article>
-      
+                <p>Hello, this is <strong style="color:DeepPink">Raayan's</strong> website. Thanks for stopping by.</p>
 
-    <footer>
-        
-  
-    </footer>
+            </header>
 
-      
 
-    </div>
+            <article style="border: 4px dashed Orange; margin: 0px; padding: 10px">
+                <p>Some things I like:</p>
 
-    
-  </main>
+                <ul>
+                    <li>reading</li>
+                    <li>running</li>
+                    <li>computers</li>
+                    <li>existential dread</li>
+                    <li>art</li>
+                    <li>guitars</li>
+                    <li>food</li>
+                    <li>wine</li>
+                    <li>movies</li>
+                </ul>
 
-  
+                <p>Good links for guests:</p>
+
+                <ul>
+                    <li><a href="https://github.com/raayan">github</a></li>
+                    <li><a href="/resume.pdf">resume</a></li>
+                    <li><a href="https://www.linkedin.com/in/raayan">LinkedIn</a> (yikes)</li>
+                    <li><a href="mailto:raayan@raayanpillai.com">please no emails</a></li>
+                </ul>
+
+
+                <article style="border: 4px dashed DeepPink; padding: 10px; margin: 10px">
+                    <p>Check out this sweet 2D gaussian mixture model made with Rust and WASM</p>
+
+                    <canvas id="canvas" width="800" height="600" plot-yaw=1></canvas>
+
+                    <p>(Your browser is computing this)</p>
+                </article>
+
+                <p>Good-bye!</p>
+            </article>
+
+
+            <footer>
+
+
+            </footer>
+
+
+
+        </div>
+
+
+    </main>
+
+
 </body>
 
 </html>
-
-
