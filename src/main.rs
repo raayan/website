@@ -10,8 +10,8 @@ use plotters::{
     prelude::{ChartBuilder, IntoDrawingArea, IntoLinspace, PathElement, SeriesLabelPosition},
     series::SurfaceSeries,
     style::{
-        full_palette::{GREY, PURPLE},
-        Color, IntoFont, RGBColor, BLACK, BLUE, CYAN, GREEN, MAGENTA, RED, WHITE,
+        full_palette::PURPLE, Color, IntoFont, RGBColor, BLACK, BLUE, CYAN, GREEN, MAGENTA, RED,
+        WHITE,
     },
 };
 use plotters_canvas::CanvasBackend;
