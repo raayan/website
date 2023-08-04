@@ -43,7 +43,7 @@ fn main() -> Result<(), JsValue> {
             .unwrap()
             .into_drawing_area();
 
-        root.fill(&BLACK).map_err(|s| s.to_string())?;
+        root.fill(&WHITE).map_err(|s| s.to_string())?;
 
         let quadrant_size = QUADRANT_SCALE + QUADRANT_PAD;
         let x_axis = (-quadrant_size..quadrant_size).step(0.1);
@@ -59,7 +59,7 @@ fn main() -> Result<(), JsValue> {
 
         chart
             .plotting_area()
-            .fill(&BLACK)
+            .fill(&WHITE)
             .map_err(|s| s.to_string())?;
 
         chart.with_projection(|mut pb| {
@@ -71,8 +71,8 @@ fn main() -> Result<(), JsValue> {
 
         chart
             .configure_axes()
-            .label_style(("monospace", 15).into_font().color(&GREY))
-            .light_grid_style(GREY.mix(0.20))
+            .label_style(("monospace", 15).into_font().color(&BLACK))
+            .light_grid_style(BLACK.mix(0.20))
             .max_light_lines(10)
             .draw()
             .map_err(|s| s.to_string())?;
@@ -99,12 +99,12 @@ fn main() -> Result<(), JsValue> {
             .into_drawing_area();
 
         let mut chart = cs.clone().restore(&root);
-        chart.plotting_area().fill(&BLACK).unwrap();
+        chart.plotting_area().fill(&WHITE).unwrap();
 
         chart
             .configure_axes()
-            .label_style(("monospace", 15).into_font().color(&GREY))
-            .light_grid_style(GREY.mix(0.20))
+            .label_style(("monospace", 15).into_font().color(&BLACK))
+            .light_grid_style(BLACK.mix(0.20))
             .max_light_lines(10)
             .draw()
             .unwrap();
@@ -143,16 +143,16 @@ fn main() -> Result<(), JsValue> {
                 SurfaceSeries::xoz(points.clone(), points.clone(), |x, y| {
                     mixture.pdf(&dvector![x, y])
                 })
-                .style(&WHITE.mix(0.5)),
+                .style(&BLACK.mix(0.5)),
             )
             .unwrap()
             .label(format!("{:06} observations", observations))
-            .legend(|(x, y)| PathElement::new(vec![(x, y), (x + 20, y)], WHITE));
+            .legend(|(x, y)| PathElement::new(vec![(x, y), (x + 20, y)], BLACK));
 
         chart
             .configure_series_labels()
-            .label_font(("monospace", 15).into_font().color(&WHITE))
-            .border_style(WHITE)
+            .label_font(("monospace", 15).into_font().color(&BLACK))
+            .border_style(BLACK)
             .position(SeriesLabelPosition::UpperLeft)
             .draw()
             .unwrap();
